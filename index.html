@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Social Media Style Number</title>
+  <script defer src="./main.js"></script>
+</head>
+<body class=" bg-slate-50 min-h-screen font-mono text-center">
+  <main class=" container mx-auto grid grid-cols-2 gap-5 px-4">
+    <h1 class="col-span-2 pt-10 text-4xl font-bold leading-loose">格式化大數字</h1>
+    <h2 class="col-span-2">使用 new Intl.NumberFormat()</h2>
+    <article class=" bg-amber-100 col-span-2">
+      <h3 class=" break-words leading-loose bg-amber-50 text-xl font-bold">基礎使用方式</h3>
+      <p class=" break-words p-8"><span class=" bg-gray-300">new Intl.NumberFormat()</span>或是直接使用<span class=" bg-gray-300">Intl.NumberFormat()</span></p>
+    </article>
+    <article class=" bg-amber-100 col-span-2 lg:col-span-1">
+      <h3 class="format-1 leading-loose break-words bg-amber-50"></h3>
+      <p class=" break-words p-8">new Intl.NumberFormat().format(601900)</p>
+    </article>
+    <article class=" bg-amber-100 col-span-2 lg:col-span-1">
+      <h3 class="format-2 leading-loose break-words bg-amber-50"></h3>
+      <p class=" break-words p-8">new Intl.NumberFormat("en-US", { style: 'percent', }).format(3500)</p>
+    </article>
+    <article class=" bg-amber-100 col-span-2 lg:col-span-1">
+      <h3 class="format-3 leading-loose break-words bg-amber-50"></h3>
+      <p class=" break-words p-8">new Intl.NumberFormat('zh-TW', { notation: 'compact' }).format(7384927193)</p>
+    </article>
+    <article class=" bg-amber-100 col-span-2 lg:col-span-1">
+      <h3 class="format-4 leading-loose break-words bg-amber-50"></h3>
+      <p class=" break-words p-8">new Intl.NumberFormat('en', { maximumFractionDigits: 1, }).format(4.67567)</p>
+    </article>
+    <article class=" bg-amber-100 col-span-2 lg:col-span-1">
+      <h3 class="format-5 leading-loose break-words bg-amber-50"></h3>
+      <p class=" break-words p-8">new Intl.NumberFormat('zh-TW', { notation: 'compact', style: 'currency', currency: 'TWD' }).format(846284765)</p>
+    </article>
+  </main>
+</body>
+</html>
